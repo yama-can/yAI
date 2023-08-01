@@ -1,5 +1,5 @@
 # include <iostream>
-# include <SimpleAI/SimpleAI.hpp>
+# include <yAI/yAI.hpp>
 
 using namespace std;
 
@@ -39,7 +39,7 @@ int main()
 
 	int totalReward = 0;
 
-	for (int i = 0; i < 100000; i++)
+	for (int i = 0; i < 100; i++)
 	{
 		int state = 0;
 		int reward = 0;
