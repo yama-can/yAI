@@ -1,7 +1,6 @@
+# pragma once
 # include <iostream>
 # include <yAI/yAI.hpp>
-
-using namespace std;
 
 class Env : public Q_Learning::EnvBase<int, int>
 {
@@ -32,7 +31,7 @@ public:
 	}
 };
 
-void q_learning()
+inline void q_learning()
 {
 	Env env;
 	Agent agent;
@@ -55,7 +54,6 @@ void q_learning()
 
 				reward += data.reward;
 
-				cout << *action << endl;
 				if (data.done) break;
 				state = data.nextState;
 			}
@@ -70,5 +68,5 @@ void q_learning()
 
 		totalReward += reward;
 	}
-	cout << "Q_Learning TotalReward: " << totalReward << endl;
+	std::cout << "Q_Learning TotalReward: " << totalReward << std::endl;
 }
